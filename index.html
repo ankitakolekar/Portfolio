@@ -7,11 +7,12 @@
     <title>Ankita Kolekar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="content">
+        <div class="content1">
             <div class="logo">
                 <a href="#">Portfolio.</a>
             </div>
@@ -19,9 +20,9 @@
                 <div class="icon cancel-btn">
                     <i class="fas fa-times"></i>
                 </div>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -40,26 +41,148 @@
                 <p>Passionate Web Developer <br>And Data Analyst</p>
             </div>
             <div class="view">
-                <a href="#">VIEW PORTFOLIO ---</a>
+                <a href="#Projects">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i> </a>
+                
             </div>
+        </div>
+
+        <div class="SocialLinks">
+            <a href="https://www.linkedin.com/in/ankita-kolekar-bab8012a6/" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+                linkedin
+            </a>
+            <a href="https://github.com/ankitakolekar" target="_blank">
+                <i class="fab fa-github"></i> 
+                GitHub
+            </a>
         </div>
     </div>
 
     <!-- About Section -->
     <div id="About">
         <div class="AboutText">
-            <h1>About Us</h1>
+            <h1>About Me</h1>
             <p>I am a passionate and driven individual with a strong interest in both web development and data analysis.
                 Currently pursuing my third year in Bachelor's degree in Information Technology, I am dedicated to
                 expanding my knowledge and skills in these fields. With a keen eye for detail and a knack for
                 problem-solving, I strive to create impactful and user-centric web applications while also delving into
                 the world of data to uncover insights and drive informed decision-making. </p>
-            <a href="#">Download CV</a>
+            <button  class="download-button">
+                <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                        stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> Download CV</div>
+                <a href="Images/Resume.pdf" download class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
+                        stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </a>
+            </button>
         </div>
-
     </div>
 
-
+    <div id="Projects">
+        <main>
+            <div class="frame">
+                <nav class="frame__works">
+                    <span>Recent works</span>
+                    <a href="#content-1">Twitter Clone</a>
+                    <a href="#content-2">Blood Bank</a>
+                    <a href="#content-3">Currency Converter</a>
+                    <a href="#content-4">StackOverFlow Clone</a>
+                    <!-- <a href="#content-5">Prismatica</a> -->
+                </nav>
+                <h2 class="frame__title-main"><span>My</span> <span>Projects</span></h2>
+                <div class="frame__content">
+                    <div class="content" id="content-1" data-bg="bg-1">
+                        <h2 class="content__title">Twitter Clone</h2>
+                        <div class="content__img pos-1" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/1.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-2" data-dir="left">
+                            <div class="content__img-inner" style="background-image:url(media/2.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-3" data-dir="top">
+                            <div class="content__img-inner" style="background-image:url(media/3.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="content" id="content-2" data-bg="bg-2">
+                        <h2 class="content__title">Blood Bank</h2>
+                        <div class="content__img pos-4" data-dir="bottom">
+                            <div class="content__img-inner" style="background-image:url(media/4.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-5" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/5.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-6" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/6.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="content" id="content-3" data-bg="bg-3">
+                        <h2 class="content__title">Currency Converter</h2>
+                        <div class="content__img pos-7" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/7.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-8" data-dir="bottom">
+                            <div class="content__img-inner" style="background-image:url(media/8.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-9" data-dir="left">
+                            <div class="content__img-inner" style="background-image:url(media/9.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="content" id="content-4" data-bg="bg-4">
+                        <h2 class="content__title">StackOverFlow Clone</h2>
+                        <div class="content__img pos-10" data-dir="left">
+                            <div class="content__img-inner" style="background-image:url(media/10.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-11" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/11.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-12" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/12.jpg)"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="content" id="content-5" data-bg="bg-5">
+                        <h2 class="content__title">Prismatica</h2>
+                        <div class="content__img pos-13" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/13.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-14" data-dir="bottom">
+                            <div class="content__img-inner" style="background-image:url(media/14.jpg)"></div>
+                        </div>
+                        <div class="content__img pos-15" data-dir="right">
+                            <div class="content__img-inner" style="background-image:url(media/15.jpg)"></div>
+                        </div>
+                    </div> -->
+                    
+                </div>
+            </div>
+            
+        </main>
+        <div class="background">
+            <div id="bg-1" class="background__image" style="background-image:url(media/beige1.jpg)"></div>
+            <div id="bg-2" class="background__image" style="background-image:url(media/red1.jpg)"></div>
+            <div id="bg-3" class="background__image" style="background-image:url(media/pink.jpg)"></div>
+            <div id="bg-4" class="background__image" style="background-image:url(media/beige2.jpg)"></div>
+            <div id="bg-5" class="background__image" style="background-image:url(media/red2.jpg)"></div>
+            <video autoplay muted loop class="background__video">
+                <source src="media/bg-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <script src="js/gsap.min.js"></script>
+        <!-- Image preloader -->
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="module" src="js/index.js"></script>
+    </div>
     <script src="script.js"></script>
 </body>
 

@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +31,7 @@ body {
     background: rgb(0, 123, 255, 0.3);
 }
 
-.content {
+.content1 {
     max-width: 1250px;
     margin: auto;
     padding: 0 30px;
@@ -49,7 +51,7 @@ body {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .content {
+.navbar .content1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,19 +121,19 @@ body {
 }
 
 @media (max-width: 1230px) {
-    .content {
+    .content1 {
         padding: 0 60px;
     }
 }
 
 @media (max-width: 1100px) {
-    .content {
+    .content1 {
         padding: 0 40px;
     }
 }
 
 @media (max-width: 900px) {
-    .content {
+    .content1 {
         padding: 0 30px;
     }
 }
@@ -207,7 +209,7 @@ body {
 .coverImgCont {
     width: 27em;
     position: absolute;
-    left: 40%;
+    left: 35%;
     top: 17%;
     /* z-index: 1; */
 }
@@ -232,6 +234,7 @@ body {
     top: 20%;
     right: -30%;
 }
+
 .coverImgCont>.homeText>h1 {
     font-size: 4em;
     /* font-weight: 500; */
@@ -279,6 +282,22 @@ body {
     text-transform: uppercase;
 }
 
+.SocialLinks {
+    position: absolute;
+    bottom: 20%;
+    left: 6%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.SocialLinks>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 10px;
+}
+
 
 #About {
     width: 100%;
@@ -288,23 +307,115 @@ body {
     justify-content: center;
     flex-direction: column;
     position: relative;
+    background-image: url("https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg");
+
 }
 
 #About .AboutText {
     position: absolute;
-    width: 100%;
-    top: 30%;
-    left: 20%;
+    width: 70%;
+    top: 25%;
+    left: 15%;
+    border: 1px solid #fff;
+    padding: 20px 20px;
+    padding-right: 7%;
+    padding-left: 5%;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #About .AboutText h1 {
+    font-size: 2.5em;
     font-family: "Asap Condensed", sans-serif;
-    font-weight: 350;
+    font-weight: 400;
     font-style: normal;
     letter-spacing: 0.05em;
+    margin-bottom: 25px;
 }
 
 #About p {
-    width: 65%;
     text-align: justify;
+    /* font-family: "Asap Condensed", sans-serif; */
+    /* font-weight: 400;
+    font-style: normal; */
+    margin-left: 30px;
+    font-size: 1em;
+    /* line-height: 150%; */
+    /* letter-spacing: 0.05em; */
+    margin-bottom: 30px;
+}
+
+.download-button {
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.download-button .docs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #242a35;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #01e056;
+    border: solid 1px #01e0572d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+    transform: translateY(100%)
+}
+
+.download svg polyline,
+.download svg line {
+    animation: docs 1s infinite;
+}
+
+@keyframes docs {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+#Projects {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
 }

@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #161b22;
+    color: #fff;
 }
 
 /* custom scroll bar */
@@ -181,4 +186,125 @@
     .navbar .logo a {
         font-size: 27px;
     }
+}
+
+
+
+/* Home section */
+
+#Home {
+    min-height: 115vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1617600433693-eef3435282a9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+
+}
+
+.coverImgCont {
+    width: 27em;
+    position: absolute;
+    left: 40%;
+    top: 17%;
+    /* z-index: 1; */
+}
+
+.coverImgCont>img {
+    width: 100%;
+    height: auto;
+    /* position: absolute; */
+}
+
+.coverImgCont>.imgBorder {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.coverImgCont>.homeText {
+    position: absolute;
+    top: 20%;
+    right: -30%;
+}
+.coverImgCont>.homeText>h1 {
+    font-size: 4em;
+    /* font-weight: 500; */
+    color: #fff;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    text-align: right;
+}
+
+.coverImgCont>.homeText>p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+.coverImgCont>.view {
+    width: 100%;
+    position: absolute;
+    top: 57%;
+    left: -20%;
+}
+
+.coverImgCont>.view>a {
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    font-size: 1.8em;
+    color: #fff;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+#About {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#About .AboutText {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 20%;
+}
+
+#About .AboutText h1 {
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+#About p {
+    width: 65%;
+    text-align: justify;
 }

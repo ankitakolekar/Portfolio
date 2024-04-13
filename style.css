@@ -220,7 +220,7 @@ body {
         left: 18%;
     }
     #Home {
-        min-height: 70vh;
+        min-height: 80vh;
     }
     
 }
@@ -368,7 +368,7 @@ body {
 }
 
 .about-info li .nameeee {
-    width: calc(100% - 130px);
+    width: calc(100% - 90px);
     color: #eee;
 }
 
@@ -378,14 +378,14 @@ body {
         left: 5%;
     }
     #About .AboutText p {
-        font-size: .8em;
+        font-size: .7em;
     }
     #About .AboutText span {
-        font-size: .8em;
+        font-size: .6em;
     }
 
     #About {
-        min-height: 60vh;
+        min-height: 70vh;
     }
 }
 
@@ -639,4 +639,10 @@ body {
     flex-direction: column;
     margin-left: 20px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        margin: 15px;
+    }
 }

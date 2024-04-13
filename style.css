@@ -387,6 +387,18 @@ body {
     #About {
         min-height: 70vh;
     }
+
+    .coverImgCont>.homeText>h1 {
+        font-size: 2em;
+    }
+    .coverImgCont>.homeText>p {
+        font-size: .7em;
+    }
+
+    .coverImgCont>.view>a {
+        margin-top: 63px;
+        font-size: .9em;
+    }
 }
 
 

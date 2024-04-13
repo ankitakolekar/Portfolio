@@ -256,7 +256,7 @@
 	margin: 0;
 	line-height: 1;
 	color: var(--color-title);
-	font-size: clamp(2rem, 10vw, 9rem);
+	font-size: clamp(1rem, 4vw, 3rem);
 }
 
 .no-js .content__title {

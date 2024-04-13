@@ -207,11 +207,22 @@ body {
 }
 
 .coverImgCont {
-    width: 27em;
+    width: 22em;
     position: absolute;
     left: 35%;
     top: 17%;
     /* z-index: 1; */
+}
+
+@media (max-width: 768px) {
+    .coverImgCont {
+        width: 14em;
+        left: 18%;
+    }
+    #Home {
+        min-height: 70vh;
+    }
+    
 }
 
 .coverImgCont>img {
@@ -236,7 +247,7 @@ body {
 }
 
 .coverImgCont>.homeText>h1 {
-    font-size: 4em;
+    font-size: 3.3em;
     /* font-weight: 500; */
     color: #fff;
     font-family: "Asap Condensed", sans-serif;
@@ -248,7 +259,7 @@ body {
 
 .coverImgCont>.homeText>p {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
     color: #fff;
     font-family: "Asap Condensed", sans-serif;
@@ -263,7 +274,7 @@ body {
 .coverImgCont>.view {
     width: 100%;
     position: absolute;
-    top: 57%;
+    top: 53%;
     left: -20%;
 }
 
@@ -271,7 +282,7 @@ body {
     width: 100%;
     position: absolute;
     margin-top: 100px;
-    font-size: 1.8em;
+    font-size: 1.3em;
     color: #fff;
     font-family: "Asap Condensed", sans-serif;
     font-weight: 500;
@@ -293,7 +304,7 @@ body {
 .SocialLinks>a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.1em;
     cursor: pointer;
     margin: 10px;
 }
@@ -314,14 +325,19 @@ body {
 #About .AboutText {
     position: absolute;
     width: 70%;
-    top: 25%;
+    top: 50%;
+    transform: translate(0, -50%);
     left: 15%;
     border: 1px solid #fff;
     padding: 20px 20px;
     padding-right: 7%;
     padding-left: 5%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#About .aboutDesc {
+    margin-bottom: 25px;
 }
 
 #About .AboutText h1 {
@@ -333,17 +349,47 @@ body {
     margin-bottom: 25px;
 }
 
-#About p {
-    text-align: justify;
-    /* font-family: "Asap Condensed", sans-serif; */
-    /* font-weight: 400;
-    font-style: normal; */
-    margin-left: 30px;
-    font-size: 1em;
-    /* line-height: 150%; */
-    /* letter-spacing: 0.05em; */
-    margin-bottom: 30px;
+.about-info {
+    list-style: none;
+
 }
+
+.about-info li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.about-info li span {
+    font-weight: 600;
+    color: #fff;
+    width: 130px;
+}
+
+.about-info li .nameeee {
+    width: calc(100% - 130px);
+    color: #eee;
+}
+
+@media (max-width: 768px) {
+    #About .AboutText {
+        width: 90%;
+        left: 5%;
+    }
+    #About .AboutText p {
+        font-size: .8em;
+    }
+    #About .AboutText span {
+        font-size: .8em;
+    }
+
+    #About {
+        min-height: 60vh;
+    }
+}
+
+
 
 .download-button {
     position: relative;
@@ -380,7 +426,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 90%;
+    /* max-width: 90%; */
     margin: 0 auto;
     z-index: -1;
     border-radius: 4px;
@@ -418,4 +464,179 @@ body {
     width: 100%;
     min-height: 100vh;
     position: relative;
+}
+
+
+/* Skills Css */
+
+
+#Skills {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    min-width: 18rem;
+    min-height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #32a6ff
+}
+
+.notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #18181b;
+    z-index: 2
+}
+
+.notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+}
+
+.notification:hover:after {
+    transform: translateX(0.15rem)
+}
+
+.notititle {
+    color: var(--color);
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.notification:hover .notititle {
+    transform: translateX(0.15rem)
+}
+
+.notibody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
+
+.notification:hover .notibody {
+    transform: translateX(0.25rem)
+}
+
+.notiglow,
+.notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.notiglow {
+    z-index: 3;
+}
+
+.notiborderglow {
+    z-index: 1;
+}
+
+.notification:hover .notiglow {
+    opacity: 0.1
+}
+
+.notification:hover .notiborderglow {
+    opacity: 0.1
+}
+
+.note {
+    color: var(--color);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+}
+.cards {
+    margin: 40px;
+}
+
+.SkillContent {
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.skillsCard .notititle {
+    margin-top: 5px;
+}
+.skillsCard .SkillContent {
+    margin-bottom: 10px;
+}
+
+.EducationCard .leftSkill p {
+    font-size: .7em;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+.EducationCard .leftSkill{
+    margin: 5px;
+}
+.EducationCard .SkillContent .Diploma {
+    margin-top: 15px;
+}
+
+
+.EducationCard .SkillContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.CertCard .leftSkill p {
+    font-size: .7em;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+.CertCard .leftSkill{
+    margin: 5px;
+}
+.CertCard .SkillContent .Diploma {
+    margin-top: 15px;
+}
+
+
+.CertCard .SkillContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
